@@ -1,3 +1,9 @@
+/**
+ * Purpose  - User Registration
+ *
+ * @author - Resh Singh
+
+ */
 package com.bridgelabz;
 
 import java.util.regex.Pattern;
@@ -40,5 +46,12 @@ public class UserRegistration {
             return "Password rule 3 is " + Pattern.compile(pattern).matcher(password).matches();
         };
         System.out.println(isValidPassword3.validate("^[a-z](?=.*[A-Z]+)(?=.*[0-9]+).{8,}$", "reshSin11"));
+ UC8-PasswordRule4
+        Validation isValidPassword4 = (pattern, password) -> {
+            return "Password rule 4 is " + Pattern.compile(pattern).matcher(password).matches();
+        };
+        System.out.println(isValidPassword4.validate("^[0-9a-zA-Z!,@#$&*().]{8,}$", "resh@Sin11"));
+
+ master
     }
 }
